@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Britton Distributions Inc.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/Britton_icon.ico">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" aria-label="Britton Distributions Inc.">
+                    <div class="logo-img">
+                        <img src="images/britton_logo.png" alt="Britton Distributions Inc.">
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul class="nav" id="mainNav">
+                        <li class="nav-item has-dropdown">
+                            <a href="about.html" class="nav-link">About Us <span class="nav-arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span></a>
+                            <div class="dropdown">
+                                <a href="about.html" class="dropdown-link">Company Background</a>
+                                <a href="services.html" class="dropdown-link">Services (Malasakit Care)</a>
+                                <a href="healthcare-partners.html" class="dropdown-link">Healthcare Partners</a>
+                                <a href="quality-compliance.html" class="dropdown-link">Quality &amp; Compliance</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="products.html" class="nav-link">Our Products</a></li>
+                        <li class="nav-item"><a href="news-updates.html" class="nav-link">News &amp; Updates</a></li>
+                        <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                        <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="subpage">
+        <section class="page-hero">
+            <div class="container">
+                <span class="hero-eyebrow">Talk to the Malasakit Care Team</span>
+                <h1>Contact Us</h1>
+                <p class="hero-subtitle">We're ready to support your healthcare needs, from product inquiries to partnership opportunities.</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="section-poster poster-art" aria-hidden="true"></div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h2>Call or Email</h2>
+                        <p><i class="fas fa-phone"></i> (02) 8-6442-21</p>
+                        <p><i class="fas fa-mobile-alt"></i> +63 917 555 0123</p>
+                        <p><i class="fas fa-envelope"></i> info@britton.com.ph</p>
+                        <p><i class="fas fa-envelopes-bulk"></i> sales@britton.com.ph</p>
+                        <p><i class="fas fa-headset"></i> support@britton.com.ph</p>
+                    </div>
+                    <div class="contact-card">
+                        <h2>Visit Our Office</h2>
+                        <p><strong>BRITTON DISTRIBUTIONS INC.</strong></p>
+                        <p>Unit 17B Strata 2000 Building<br>No. 9 F. Ortigas Jr. Road<br>Ortigas Center, Pasig City<br>Metro Manila, Philippines</p>
+                        <a href="https://goo.gl/maps/7MQfExample" target="_blank" rel="noopener" class="secondary-btn">Open Google Maps</a>
+                    </div>
+                    <div class="contact-card" id="hr">
+                        <h2>Human Resources</h2>
+                        <p><i class="fas fa-user-tie"></i> careers@britton.com.ph</p>
+                        <p><i class="fas fa-phone-volume"></i> +63 917 555 0456</p>
+                        <p>For job applications, internships, and employee verification requests.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Complete the form and we will respond within one business day.</p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactPhone">Contact Number</label>
+                            <input type="tel" id="contactPhone" name="contactPhone">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactTopic">Inquiry Type</label>
+                            <select id="contactTopic" name="contactTopic">
+                                <option value="products">Product Inquiry</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="services">Malasakit Care Services</option>
+                                <option value="careers">Careers</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">How can we help?</label>
+                        <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="products-btn">Submit Inquiry</button>
+                        <p class="form-note"><i class="fas fa-lock"></i> Your information is kept confidential and used only to respond to your inquiry.</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.575example!2d121.058example!3d14.583example!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c82example!2sStrata%202000!5e0!3m2!1sen!2sph!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Britton Distributions Inc.</h3>
+                    <p>Health is our mission. Malasakit is our passion.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/britton" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/britton" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:info@britton.com.ph" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://instagram.com/britton" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/britton" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="services.html">Services (Malasakit Care)</a></li>
+                        <li><a href="healthcare-partners.html">Healthcare Partners</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Office</h3>
+                    <p><strong>BRITTON DISTRIBUTIONS INC.</strong><br>Unit 17B Strata 2000 Building, No. 9 F. Ortigas Jr. Road,<br>Ortigas Center, Pasig City, Metro Manila, Philippines</p>
+                    <p><i class="fas fa-phone"></i> (02) 8-6442-21</p>
+                    <p><i class="fas fa-envelope"></i> info@britton.com.ph</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Commitment</h3>
+                    <p>Certified distribution partner compliant with FDA and DOH regulations, delivering healthcare solutions with compassion and integrity.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Britton Distributions Inc. All rights reserved. <a href="privacy.html">Privacy Policy</a> &bull; <a href="sitemap.html">Site Map</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="messenger-float">
+        <a href="https://m.me/britton" target="_blank" rel="noopener" aria-label="Chat with Britton Distributions on Messenger">
+            <i class="fab fa-facebook-messenger"></i>
+            <span>Message Us</span>
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
