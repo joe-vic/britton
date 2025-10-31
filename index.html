@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Britton Distributions Inc. - Quality Healthcare Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/Britton_icon.ico">
+</head>
+<body>
+   <div id="header-container"></div>
+
+    <main>
+        <section class="hero-slider">
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <img class="slide-bg" src="images/slides/slide1-large.webp"
+                         srcset="images/slides/slide1-large.webp 576w,
+                                 images/slides/slide1-large.webp 1024w,
+                                 images/slides/slide1-large.webp 1920w"
+                         sizes="100vw"
+                         alt="A collage of Britton's healthcare products."
+                         style="object-fit: cover; position: absolute; width: 100%; height: 100%; z-index: 1;">
+                    <div class="slide-content">
+                        <h1>Quality, Effective,<br> and  <span class="text-brand">Affordable Healthcare</span></h1>
+                        <p>Delivering trusted medicines, consumer products, and compassionate service for Filipino families nationwide.</p>
+                        <a href="products.html" class="slide-btn">Explore Our Products</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-bg" style="background-image: url('images/slides/slide2-large.webp');"></div>
+                    <div class="slide-content">
+                        <h1>Mission, Vision, and <span class="text-brand">Core Values</span></h1>
+                        <p>Guided by Malasakit, we champion meaningful impact, accountability, and lifelong wellness for the communities we serve.</p>
+                        <a href="#mission-vision" class="slide-btn">See Our Purpose</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-bg" style="background-image: url('images/slides/slide3-large.webp');"></div>
+                    <div class="slide-content">
+                        <h1>Connect with Britton Distributions</h1>
+                        <p>Talk to our <span class="text-brand">Malasakit Care</span> team for partnerships, distribution support, and healthcare initiatives.</p>
+                        <a href="contact.html" class="slide-btn">Contact Us Today</a>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-arrow prev" id="prevSlide" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-arrow next" id="nextSlide" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-nav" id="sliderNav">
+                <div class="slider-dot active" data-index="0"></div>
+                <div class="slider-dot" data-index="1"></div>
+                <div class="slider-dot" data-index="2"></div>
+            </div>
+        </section>
+
+        <section class="mission-section intro-section no-media" id="mission-vision">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-content">
+                         <span class="section-eyebrow text-brand" style="font-size: 2em;">Our Story</span> 
+                        <h2>Building Healthier Communities Since 2001</h2>
+                        <p>Britton Distributions Inc. began as a dedicated pharmaceutical distributor focused on providing reliable access to essential medicines. Over the years, our Malasakit-driven culture transformed us into a nationwide healthcare partner, offering integrated services, product innovation, and compassionate support for every Filipino household.</p>
+                        <div class="mission-highlights">
+                            <div>
+                                <strong>Quality First</strong>
+                                <p>Rigorous standards and trusted supply chain operations.</p>
+                            </div>
+                            <div>
+                                <strong>Nationwide Reach</strong>
+                                <p>Distribution hubs and partners covering key regions of the Philippines.</p>
+                            </div>
+                            <div>
+                                <strong>Customer Focus</strong>
+                                <p>Responsive Malasakit Care team supporting clients and communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Removed mission/vision poster images to streamline homepage -->
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section no-media" id="values">
+            <div class="container">
+                <div class="section-header">
+                    <h2>MALASAKIT Core Values</h2>
+                    <p>Principles that guide how we collaborate, innovate, and care for communities.</p>
+                </div>
+                <div class="value-columns">
+                    <div class="value-column">
+                        <h3>The Malasakit Mindset</h3>
+                        <p>Our culture empowers every team member to deliver with empathy, accountability, and excellence-ensuring that every initiative reflects true service to others.</p>
+                        <a href="about.html#core-values" class="learn-more-link">Learn more about our values</a>
+                    </div>
+                    <!-- Removed Malasakit values poster image for a cleaner, lighter layout -->
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section" id="products">
+            <div class="container">
+                <div class="products-content">
+                    <div class="products-text">
+                        <span class="section-eyebrow text-brand">Our Portfolio</span>
+                        <h2>Quality Medicines and Healthcare Essentials</h2>
+                        <p>We distribute an expanding line of over-the-counter and prescription medicines, vitamins, wellness supplements, and personal care solutions designed around the needs of Filipino families.</p>
+                        <p>Each product line undergoes strict quality assurance focused on safety, efficacy, and accessibility for our partner retailers, clinics, and hospitals.</p>
+                        <div class="cta-group">
+                            <a href="products.html" class="products-btn">View Product Categories</a>
+                            <a href="resources.html#catalogs" class="secondary-btn">Download Catalogs</a>
+                        </div>
+                    </div>
+                    <div class="products-image-container">
+                        <img src="images/slides/slides5-large.webp" alt="Britton product range" class="products-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-showcase" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Malasakit Care Services</h2>
+                    <p>From nationwide distribution to patient-centered programs, we deliver end-to-end support.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <i class="fas fa-truck-loading"></i>
+                        <h3>Distribution Network</h3>
+                        <p>Temperature-controlled warehousing, efficient last-mile coverage, and compliant logistics across Luzon, Visayas, and Mindanao.</p>
+                    </article>
+                    <article class="service-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Customer Support</h3>
+                        <p>Responsive teams assisting pharmacists, doctors, and retailers with product guidance, order tracking, and patient education.</p>
+                    </article>
+                    <article class="service-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Healthcare Initiatives</h3>
+                        <p>Community wellness drives, medical missions, and health awareness programs driven by Malasakit.</p>
+                    </article>
+                </div>
+                <div class="services-cta">
+                    <a href="services.html" class="secondary-btn">Discover Malasakit Care</a>
+                    <a href="healthcare-partners.html" class="secondary-btn">Partner With Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-section" id="history">
+            <div class="container">
+                <div class="history-layout">
+                    <div class="history-content">
+                        <span class="section-eyebrow text-brand">Our Journey</span>
+                        <h2>From Mandaluyong Roots to National Presence</h2>
+                        <p>Starting as a local distributor in 2001, Britton Distributions Inc. scaled operations through strong partner relationships, a commitment to regulatory compliance, and a culture anchored on Malasakit.</p>
+                        <ul class="history-timeline">
+                            <li><strong>2001:</strong> Founded with a small team serving Metro Manila pharmacies.</li>
+                            <li><strong>2008:</strong> Expanded portfolio to include vitamins, supplements, and consumer health brands.</li>
+                            <li><strong>2014:</strong> Established regional logistics hubs supporting Visayas and Mindanao partners.</li>
+                            <li><strong>2022:</strong> Introduced Malasakit Care initiatives focused on preventive healthcare education.</li>
+                        </ul>
+                    </div>
+                    <div class="history-card">
+                        <h3>Get In Touch</h3>
+                        <p>Have questions or want to partner with us? Our Malasakit Care team is ready to help.</p>
+                        <a href="contact.html" class="products-btn">Contact Us</a>
+                        <a href="https://goo.gl/maps/7MQfExample" class="secondary-btn" target="_blank" rel="noopener">View on Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-links" id="quick-links">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Explore Britton Online</h2>
+                    <p>Quick navigation to the most requested pages.</p>
+                </div>
+                <div class="quick-links-grid">
+                    <a href="quality-compliance.html" class="quick-link-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Quality &amp; Compliance</h3>
+                        <p>See how we uphold FDA and DOH standards.</p>
+                    </a>
+                    <a href="news-updates.html" class="quick-link-card">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>News &amp; Updates</h3>
+                        <p>Latest announcements, health insights, and product news.</p>
+                    </a>
+                    <a href="distribution-network.html" class="quick-link-card">
+                        <i class="fas fa-route"></i>
+                        <h3>Distribution Network</h3>
+                        <p>Coverage areas and logistics capabilities.</p>
+                    </a>
+                    <a href="faq.html" class="quick-link-card">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Frequently Asked Questions</h3>
+                        <p>Get answers about orders, partnerships, and support.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <div id="footer-container"></div>
+   <script src="js/templating.js"></script>
+
+    <div class="messenger-float">
+        <a href="https://m.me/britton" target="_blank" rel="noopener" aria-label="Chat with Britton Distributions on Messenger">
+            <i class="fab fa-facebook-messenger"></i>
+            <span>Message Us</span>
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
