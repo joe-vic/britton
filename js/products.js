@@ -1,4 +1,4 @@
-﻿﻿(function () {
+(function () {
    const PRODUCTS = [
   {
     id: 'fenogal-160mg',
@@ -7,7 +7,7 @@
     category: 'Cholesterol Management',
     genericName: 'Fenofibrate',
     formSize: '160mg / Capsule / 30\'s',
-    image: 'fenogal-160mg.webp',
+    image: 'DIV 2/CARDIO/FENOGAL 1 1024x1024.jpg',
     imageAlt: 'Fenogal 160mg fenofibrate capsules',
     summary: 'Fenogal 160mg contains Fenofibrate, a lipid-lowering medication that helps reduce triglycerides and bad cholesterol (LDL) while increasing good cholesterol (HDL).',
     benefits: [
@@ -31,7 +31,7 @@
     category: 'Blood Pressure Management',
     genericName: 'Telmisartan + Hydrochlorothiazide',
     formSize: 'Tablet / 30\'s',
-    image: 'telchor-40-12-5mg.webp',
+    image: 'DIV 2/CARDIO/TELCHOR 1 1024x1024.jpg',
     imageAlt: 'Telchor 40mg/12.5mg tablets',
     summary: 'Telchor combines Telmisartan and Hydrochlorothiazide to effectively control high blood pressure by relaxing blood vessels and promoting gentle fluid excretion.',
     benefits: [
@@ -151,7 +151,7 @@
     category: 'Cholesterol Control',
     genericName: 'Rosuvastatin Calcium',
     formSize: 'Tablet / 10\'s',
-    image: 'vaptor.webp',
+    image: 'DIV 2/CARDIO/VAPTOR 1 1024x1024.jpg',
     imageAlt: 'Vaptor rosuvastatin tablets',
     summary: 'Vaptor contains Rosuvastatin Calcium, a statin medication that helps reduce bad cholesterol (LDL) and triglycerides while increasing good cholesterol (HDL) to protect heart health.',
     benefits: [
@@ -175,7 +175,7 @@
     category: 'Gout Management',
     genericName: 'Febuxostat',
     formSize: '40mg / Tablet / 30\'s',
-    image: 'brisat.webp',
+    image: 'DIV 1/ORTHO RHEUMA/BRISTAT 1024x1024.jpg',
     imageAlt: 'Brisat febuxostat tablets',
     summary: 'Brisat contains Febuxostat, a xanthine oxidase inhibitor that helps lower uric acid levels in the blood for patients with gout.',
     benefits: [
@@ -199,7 +199,7 @@
     category: 'Neuropathic Pain',
     genericName: 'Pregabalin',
     formSize: '75mg / Capsule / 30\'s',
-    image: 'bagabrit.webp',
+    image: 'DIV 1/NEURO/BAGABRIT 1024x1024.jpg',
     imageAlt: 'Bagabrit pregabalin capsules',
     summary: 'Bagabrit contains Pregabalin, an anticonvulsant used to treat neuropathic pain and manage seizures.',
     benefits: [
@@ -223,7 +223,7 @@
     category: 'Seizure Control',
     genericName: 'Levetiracetam',
     formSize: 'Tablet / 30\'s',
-    image: 'lumark-500.webp',
+    image: 'DIV 1/NEURO/LUMARK.jpg',
     imageAlt: 'Lumark 500 levetiracetam tablets',
     summary: 'Lumark 500 contains Levetiracetam, an antiepileptic medication used to control seizures in epilepsy patients.',
     benefits: [
@@ -247,7 +247,7 @@
     category: 'Cognitive Support',
     genericName: 'Panax Ginseng + Bacopa Monniera',
     formSize: 'Capsule / 30\'s',
-    image: 'memoking.webp',
+    image: 'OTC/memoking 1 1024x1024.jpg',
     imageAlt: 'Memoking cognitive support capsules',
     summary: 'Memoking combines traditional herbs Panax Ginseng and Bacopa Monniera to support cognitive function and memory enhancement.',
     benefits: [
@@ -277,7 +277,7 @@
     benefits: [
       'Helps control Parkinson\'s disease symptoms.',
       'May slow disease progression in early stages.',
-      'Reduces "off" time in levodopa-treated patients.',
+      'Reduces \'off\' time in levodopa-treated patients.',
       'Improves motor function and mobility.',
       'Supports comprehensive Parkinson\'s management.',
     ],
@@ -295,7 +295,7 @@
     category: 'Antioxidant Support',
     genericName: 'Haematococcus Pluvialis Extract (Natural Astaxanthin)',
     formSize: 'Box / 20\'s',
-    image: 'asthin-force-6.webp',
+    image: 'OTC/asthin force 6 quidfast 1024x1024.jpg',
     imageAlt: 'Asthin Force 6 natural astaxanthin capsules',
     summary: 'Asthin Force 6 provides powerful antioxidant protection with natural astaxanthin from Haematococcus Pluvialis extract.',
     benefits: [
@@ -319,7 +319,7 @@
     category: 'Skin Whitening & Antioxidant',
     genericName: 'Glutathione 500mg + Vitamin C 100mg',
     formSize: 'Capsule / 30\'s',
-    image: 'b-lite.webp',
+    image: 'OTC/BLITE 1024x1024.jpg',
     imageAlt: 'B-Lite glutathione and vitamin C capsules',
     summary: 'B-Lite combines Glutathione and Vitamin C to provide antioxidant support and promote skin whitening and overall health.',
     benefits: [
@@ -367,7 +367,7 @@
     category: 'Immune Booster',
     genericName: 'Echinacea Purpurea + Black Elderberry + Zinc',
     formSize: 'Caplet / 30\'s',
-    image: 'imboost-force-caplet.webp',
+    image: 'OTC/imboost caplet 1024x1024.jpg',
     imageAlt: 'Imboost Force immune support caplets',
     summary: 'Imboost Force combines Echinacea, Elderberry, and Zinc to provide comprehensive immune system support.',
     benefits: [
@@ -391,7 +391,7 @@
     category: 'Pediatric Immune Support',
     genericName: 'Echinacea Purpurea + Black Elderberry + Zinc Picolinate',
     formSize: 'Syrup / 120mL',
-    image: 'imboost-force-syrup.webp',
+    image: 'OTC/imboost syrup 1 1024x1024.jpg',
     imageAlt: 'Imboost Force immune support syrup',
     summary: 'Imboost Force Syrup provides immune support in liquid form, suitable for children and adults who prefer syrup formulations.',
     benefits: [
@@ -415,7 +415,7 @@
     category: 'Liver Support',
     genericName: 'Silymarin + Vitamin B Complex',
     formSize: 'Capsule / 30\'s',
-    image: 'hepanorm.webp',
+    image: 'OTC/hepanorm 1 1024x1024.jpg',
     imageAlt: 'Hepanorm liver support capsules',
     summary: 'Hepanorm combines Silymarin (milk thistle extract) with Vitamin B Complex to support liver health and function.',
     benefits: [
@@ -439,7 +439,7 @@
     category: 'Scabies Treatment',
     genericName: 'Permethrin Lotion',
     formSize: '30mL or 60mL / Bottle / 1\'s',
-    image: 'lindell.webp',
+    image: 'OTC/lindell 30ml 1024x1024.jpg',
     imageAlt: 'Lindell permethrin lotion',
     summary: 'Lindell contains Permethrin, a topical treatment for scabies infestation and lice treatment.',
     benefits: [
@@ -463,7 +463,7 @@
     category: 'Topical Steroid',
     genericName: 'Triamcinolone Acetonide',
     formSize: '5g / Tube / 1\'s',
-    image: 'tricort-cream.webp',
+    image: 'DIV 1/PEDIA DERMA OB/TRICORT CREAM 1024x1024.jpg',
     imageAlt: 'Tricort triamcinolone cream',
     summary: 'Tricort Cream contains Triamcinolone Acetonide, a topical corticosteroid for inflammatory skin conditions.',
     benefits: [
@@ -487,7 +487,7 @@
     category: 'Scalp Treatment',
     genericName: 'Triamcinolone Acetonide',
     formSize: '25mL / Bottle / 1\'s',
-    image: 'tricort-scalp-lotion.webp',
+    image: 'DIV 1/PEDIA DERMA OB/TRIORT SCALP LOTION 25ML 1024x1024.jpg',
     imageAlt: 'Tricort scalp lotion',
     summary: 'Tricort Scalp Lotion provides targeted treatment for scalp psoriasis, eczema, and other inflammatory scalp conditions.',
     benefits: [
@@ -511,7 +511,7 @@
     category: 'Hair Loss Treatment',
     genericName: 'Finasteride 0.1% w/w with Scalp Lotion',
     formSize: '30mL / Box / 1\'s',
-    image: 'trichogen.webp',
+    image: 'DIV 1/PEDIA DERMA OB/TRICHOGEN SCALP LOTION 30ML 1024x1024.jpg',
     imageAlt: 'Trichogen finasteride scalp lotion',
     summary: 'Trichogen contains Finasteride in a topical formulation for the treatment of male pattern hair loss.',
     benefits: [
@@ -535,7 +535,7 @@
     category: 'Natural Sleep Aid',
     genericName: 'Valerian Root + Chamomile',
     formSize: 'Capsule / 30\'s',
-    image: 'napease.webp',
+    image: 'OTC/napease 1 1024x1024.jpg',
     imageAlt: 'Napease natural sleep aid capsules',
     summary: 'Napease combines Valerian Root and Chamomile to promote natural relaxation and support restful sleep.',
     benefits: [
@@ -559,7 +559,7 @@
     category: 'Antibiotic',
     genericName: 'Meropenem 1g',
     formSize: 'Vial / 1\'s',
-    image: 'canem.webp',
+    image: 'DIV 2/GASTRO IDS IM GP/CANEM 1024x1024.jpg',
     imageAlt: 'Canem meropenem injection',
     summary: 'Canem contains Meropenem, a broad-spectrum carbapenem antibiotic for serious bacterial infections.',
     benefits: [
@@ -583,7 +583,7 @@
     category: 'Antibiotic',
     genericName: 'Levofloxacin',
     formSize: 'Tablet / 10\'s',
-    image: 'serlev-500mg.webp',
+    image: 'DIV 2/GASTRO IDS IM GP/SERLEV 1024x1024.jpg',
     imageAlt: 'Serlev levofloxacin tablets',
     summary: 'Serlev contains Levofloxacin, a fluoroquinolone antibiotic for various bacterial infections.',
     benefits: [
@@ -655,7 +655,7 @@
     category: 'Antibiotic',
     genericName: 'Vancomycin Hydrochloride',
     formSize: '500mg / Vial / 1\'s',
-    image: 'vancolon-500mg.webp',
+    image: 'DIV 2/GASTRO IDS IM GP/VANCOLON 1 1024x1024.jpg',
     imageAlt: 'Vancolon vancomycin injection',
     summary: 'Vancolon contains Vancomycin, a glycopeptide antibiotic for serious Gram-positive bacterial infections.',
     benefits: [
@@ -679,7 +679,7 @@
     category: 'Acid Reducer & Prokinetic',
     genericName: 'Pantoprazole + Domperidone (Modified Release)',
     formSize: 'Capsule / 30\'s',
-    image: 'domplux.webp',
+    image: 'DIV 2/GASTRO IDS IM GP/DOMPLUX 1 1024x1024.jpg',
     imageAlt: 'Domplux pantoprazole and domperidone capsules',
     summary: 'Domplux combines Pantoprazole for acid reduction with Domperidone for gastrointestinal motility in a modified release formulation.',
     benefits: [
@@ -703,7 +703,7 @@
     category: 'Renal Nutrition',
     genericName: 'Ketoanalogues + Essential Amino Acids',
     formSize: 'Tablet / 100\'s',
-    image: 'aminorol.webp',
+    image: 'DIV 1/NEHPRO/aminoral 1 1024X1024.jpg',
     imageAlt: 'Aminorol renal nutrition tablets',
     summary: 'Aminorol provides ketoanalogues and essential amino acids for nutritional support in chronic kidney disease patients.',
     benefits: [
@@ -727,7 +727,7 @@
     category: 'Iron Supplement',
     genericName: 'Iron Sucrose',
     formSize: 'Solution for Injection (IV) -- 20mg/mL (100mg/5mL)',
-    image: 'porsrose.webp',
+    image: 'DIV 1/NEHPRO/PORSROSE 1024x1024.jpg',
     imageAlt: 'Porsrose iron sucrose injection',
     summary: 'Porsrose provides intravenous iron sucrose for the treatment of iron deficiency anemia in patients who cannot tolerate oral iron.',
     benefits: [
@@ -751,7 +751,7 @@
     category: 'Erythropoiesis Stimulator',
     genericName: 'Recombinant Human Erythropoietin',
     formSize: '4000 IU / PFS',
-    image: 'repoitin-4000-iu.webp',
+    image: 'DIV 1/NEHPRO/repoitin 1 1024x1024.jpg',
     imageAlt: 'Repoitin erythropoietin injection',
     summary: 'Repoitin contains recombinant human erythropoietin to stimulate red blood cell production in anemia associated with chronic kidney disease.',
     benefits: [
@@ -775,7 +775,7 @@
     category: 'Plasma Volume Expander',
     genericName: 'Human Albumin',
     formSize: '50mL / Vial / 1\'s',
-    image: 'zenalb-20-50ml.webp',
+    image: 'DIV 2/GASTRO IDS IM GP/ZENALB 1 1024x1024.jpg',
     imageAlt: 'Zenalb human albumin solution',
     summary: 'Zenalb provides human albumin for volume expansion in hypovolemic shock and other conditions requiring plasma volume support.',
     benefits: [
@@ -799,7 +799,7 @@
     category: 'Anticoagulant',
     genericName: 'Heparin Sodium',
     formSize: '5mL / 1000 IU / Vial / Pack',
-    image: 'nuparin-1000iu-ml.webp',
+    image: 'DIV 1/NEHPRO/NUPARIN 1000 1024x1024.jpg',
     imageAlt: 'Nuparin heparin sodium injection',
     summary: 'Nuparin provides Heparin Sodium for anticoagulation in various clinical settings including dialysis and thrombosis prevention.',
     benefits: [
@@ -823,7 +823,7 @@
     category: 'Anticoagulant',
     genericName: 'Heparin Sodium',
     formSize: '5mL / 5000 IU / 10 Vials / Pack',
-    image: 'nuparin-5000iu-ml.webp',
+    image: 'DIV 1/NEHPRO/NUPARIN 5000 1024x1024.jpg',
     imageAlt: 'Nuparin high strength heparin injection',
     summary: 'Nuparin 5000IU/mL provides higher concentration Heparin Sodium for situations requiring stronger anticoagulation.',
     benefits: [
@@ -847,7 +847,7 @@
     category: 'Pregnancy Supplement',
     genericName: 'Folic Acid',
     formSize: '5mg / Capsule / 30\'s',
-    image: 'folisure-5mg.webp',
+    image: 'DIV 1/PEDIA DERMA OB/FOLISURE 1024x1024.jpg',
     imageAlt: 'Folisure folic acid capsules',
     summary: 'Folisure provides high-dose folic acid supplementation for pregnancy and reproductive health support.',
     benefits: [
@@ -871,7 +871,7 @@
     category: 'Multivitamin Supplement',
     genericName: 'Multivitamins',
     formSize: 'Capsule / 30\'s',
-    image: 'primovit-capsule.webp',
+    image: 'OTC/primovit capsule 1024x1024.jpg',
     imageAlt: 'Primovit multivitamin capsules',
     summary: 'Primovit Capsules provide comprehensive multivitamin support for overall health and nutritional supplementation.',
     benefits: [
@@ -895,7 +895,7 @@
     category: 'Children\'s Nutrition',
     genericName: 'Vitamins A, B, C, D + CGF + Tau Lys + Zinc',
     formSize: 'Syrup / 120mL',
-    image: 'primovit-grow-syrup.webp',
+    image: 'OTC/primo grow 1024x1024.jpg',
     imageAlt: 'Primovit childrens growth syrup',
     summary: 'Primovit Grow Syrup provides essential vitamins and nutrients specially formulated for children\'s growth and development.',
     benefits: [
@@ -1043,9 +1043,7 @@
         media.className = 'product-card__media';
         const img = document.createElement('img');
         const imageName = encodeURI(product.image);
-        img.src = `images/products/medium/${imageName}`;
-        img.srcset = `images/products/small/${imageName} 576w, images/products/medium/${imageName} 1024w, images/products/large/${imageName} 1920w`;
-        img.sizes = '(min-width: 1200px) 25vw, (min-width: 768px) 33vw, 50vw';
+        img.src = `images/products/${imageName}`;
         img.alt = product.imageAlt || product.name;
         img.loading = 'lazy';
         media.appendChild(img);
@@ -1072,7 +1070,7 @@
     function openModal(product, trigger) {
         lastFocus = trigger || document.activeElement;
         const imageName = encodeURI(product.image);
-        modalImg.src = `images/products/large/${imageName}`;
+        modalImg.src = `images/products/${imageName}`;
         modalImg.alt = product.imageAlt || product.name;
         modalTitle.textContent = product.name;
         modalTags.textContent = `${product.division} • ${product.category}`;
