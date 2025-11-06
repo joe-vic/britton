@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
    const PRODUCTS = [
   {
     id: 'fenogal-160mg',
@@ -55,7 +55,7 @@
     category: 'Hypertension and Heart Health',
     genericName: 'Telmisartan + Amlodipine (as Besilate)',
     formSize: 'Tablet / 30\'s',
-    image: 'telmal-40-5mg.webp',
+    image: 'DIV 2/CARDIO/TELMAL/tealmal 40mg5 a 1024x1024.jpg',
     imageAlt: 'Telmal 40mg/5mg tablets',
     summary: 'Telmal 40mg/5mg is a combination of Telmisartan and Amlodipine that helps manage hypertension and improve blood flow to reduce cardiovascular strain.',
     benefits: [
@@ -79,7 +79,7 @@
     category: 'Hypertension Management',
     genericName: 'Telmisartan + Amlodipine (as Besilate)',
     formSize: 'Tablet / 30\'s',
-    image: 'telmal-40-10mg.webp',
+    image: 'DIV 2/CARDIO/TELMAL/telmal 40mg10 1024x1024.jpg',
     imageAlt: 'Telmal 40mg/10mg tablets',
     summary: 'Telmal 40mg/10mg provides dual-action blood pressure control with Telmisartan and Amlodipine, formulated for patients requiring stronger antihypertensive therapy.',
     benefits: [
@@ -103,7 +103,7 @@
     category: 'Advanced Hypertension Therapy',
     genericName: 'Telmisartan + Amlodipine (as Besilate)',
     formSize: 'Tablet / 30\'s',
-    image: 'telmal-80-5mg.webp',
+    image: 'DIV 2/CARDIO/TELMAL/telmal 80mg5 a 1024x1024.jpg',
     imageAlt: 'Telmal 80mg/5mg tablets',
     summary: 'Telmal 80mg/5mg offers high-strength control for hypertension using a powerful combination of Telmisartan and Amlodipine for 24-hour vascular protection.',
     benefits: [
@@ -127,7 +127,7 @@
     category: 'High Blood Pressure Control',
     genericName: 'Telmisartan + Amlodipine (as Besilate)',
     formSize: 'Tablet / 30\'s',
-    image: 'telmal-80-10mg.webp',
+    image: 'DIV 2/CARDIO/TELMAL/telmal 80mg10 1024x1024.jpg',
     imageAlt: 'Telmal 80mg/10mg tablets',
     summary: 'Telmal 80mg/10mg provides intensive management for patients with high-risk hypertension through the dual-action synergy of Telmisartan and Amlodipine.',
     benefits: [
@@ -169,15 +169,15 @@
     tags: ['rosuvastatin', 'cholesterol', 'heart health', 'lipid control'],
   },
   {
-    id: 'brisat',
-    name: 'Brisat',
+    id: 'bristat',
+    name: 'Bristat',
     division: 'Pain / Rheumatology',
     category: 'Gout Management',
     genericName: 'Febuxostat',
     formSize: '40mg / Tablet / 30\'s',
     image: 'DIV 1/ORTHO RHEUMA/BRISTAT 1024x1024.jpg',
-    imageAlt: 'Brisat febuxostat tablets',
-    summary: 'Brisat contains Febuxostat, a xanthine oxidase inhibitor that helps lower uric acid levels in the blood for patients with gout.',
+    imageAlt: 'Bristat febuxostat tablets',
+    summary: 'Bristat contains Febuxostat, a xanthine oxidase inhibitor that helps lower uric acid levels in the blood for patients with gout.',
     benefits: [
       'Effectively reduces high uric acid levels.',
       'Helps prevent gout attacks and joint damage.',
@@ -697,15 +697,15 @@
     tags: ['gerd', 'acid reflux', 'pantoprazole', 'domperidone', 'digestive health'],
   },
   {
-    id: 'aminorol',
-    name: 'Aminorol',
+    id: 'aminoral',
+    name: 'Aminoral',
     division: 'Nephrology / Hematology / Anticoagulant',
     category: 'Renal Nutrition',
     genericName: 'Ketoanalogues + Essential Amino Acids',
     formSize: 'Tablet / 100\'s',
     image: 'DIV 1/NEHPRO/aminoral 1 1024X1024.jpg',
-    imageAlt: 'Aminorol renal nutrition tablets',
-    summary: 'Aminorol provides ketoanalogues and essential amino acids for nutritional support in chronic kidney disease patients.',
+    imageAlt: 'Aminoral renal nutrition tablets',
+    summary: 'Aminoral provides ketoanalogues and essential amino acids for nutritional support in chronic kidney disease patients.',
     benefits: [
       'Supports nutritional needs in CKD patients.',
       'Helps reduce urea production.',
@@ -770,7 +770,7 @@
   },
   {
     id: 'zenalb-20-50ml',
-    name: 'Zenalb 20% 50mL',
+    name: 'Zenalb 20 50mL',
     division: 'Nephrology / Hematology / Anticoagulant',
     category: 'Plasma Volume Expander',
     genericName: 'Human Albumin',
@@ -794,7 +794,7 @@
   },
   {
     id: 'nuparin-1000iu-ml',
-    name: 'Nuparin 1000IU/mL',
+    name: 'Nuparin 1000 IU/mL',
     division: 'Nephrology / Hematology / Anticoagulant',
     category: 'Anticoagulant',
     genericName: 'Heparin Sodium',
@@ -818,7 +818,7 @@
   },
   {
     id: 'nuparin-5000iu-ml',
-    name: 'Nuparin 5000IU/mL',
+    name: 'Nuparin 5000 IU/mL',
     division: 'Nephrology / Hematology / Anticoagulant',
     category: 'Anticoagulant',
     genericName: 'Heparin Sodium',
