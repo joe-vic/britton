@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Plus - Pharmaceutical Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --success: #198754;
+            --info: #0dcaf0;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --pharma-blue: #0056b3;
+            --pharma-light-blue: #e8f4fd;
+            --pharma-green: #28a745;
+            --lazada: #0f146d;
+            --shopee: #ee4d2d;
+            --mercury: #0056b3;
+            --pharma-purple: #6f42c1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--pharma-blue), #007bff);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .navbar-brand i {
+            margin-right: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px;
+            border-radius: 8px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(13, 110, 253, 0.85), rgba(13, 110, 253, 0.9)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .product-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            background: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image {
+            height: 220px;
+            object-fit: cover;
+            background-color: var(--pharma-light-blue);
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--pharma-blue);
+            font-weight: 600;
+            border-radius: 20px;
+        }
+        
+        .product-title {
+            color: var(--pharma-blue);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .search-container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .category-btn {
+            border-radius: 25px;
+            margin: 5px;
+            transition: all 0.3s;
+            padding: 8px 20px;
+            font-weight: 500;
+        }
+        
+        .category-btn.active {
+            background: linear-gradient(135deg, var(--pharma-blue), #007bff);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+        }
+        
+        /* Enhanced Modal Styles */
+        .modal-content {
+            border-radius: 20px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, var(--pharma-blue), #007bff);
+            color: white;
+            border-bottom: none;
+            padding: 20px 30px;
+            position: relative;
+        }
+        
+        .modal-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+        }
+        
+        .modal-title {
+            font-weight: 700;
+            font-size: 1.8rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn-close {
+            filter: invert(1);
+            opacity: 0.8;
+        }
+        
+        .btn-close:hover {
+            opacity: 1;
+        }
+        
+        .modal-body {
+            padding: 0;
+        }
+        
+        .image-container {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .modal-product-image {
+            height: 300px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .modal-product-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .product-details-container {
+            padding: 30px;
+        }
+        
+        .product-details-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .product-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--pharma-green);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-category {
+            background: linear-gradient(135deg, var(--pharma-purple), #8B5CF6);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(111, 66, 193, 0.3);
+        }
+        
+        .product-description {
+            color: var(--secondary);
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-size: 1.05rem;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--pharma-blue);
+        }
+        
+        .details-section {
+            margin-bottom: 25px;
+        }
+        
+        .details-section h6 {
+            color: var(--pharma-blue);
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        
+        .details-section h6::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(135deg, var(--pharma-blue), #007bff);
+            border-radius: 3px;
+        }
+        
+        .details-section h6 i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--pharma-blue), #007bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .product-details-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        
+        .product-details-list li {
+            margin-bottom: 8px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .product-details-list li:before {
+            content: "✓";
+            color: var(--pharma-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            background-color: #e8f5e9;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+        }
+        
+        .warnings-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .warnings-list li {
+            margin-bottom: 8px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .warnings-list li:before {
+            content: "!";
+            color: var(--warning);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            background-color: #fff3cd;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(255, 193, 7, 0.2);
+        }
+        
+        .modal-footer {
+            border-top: 1px solid #e9ecef;
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .btn-add-to-cart {
+            background: linear-gradient(135deg, var(--pharma-green), #20c997);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .btn-add-to-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 70px;
+        }
+        
+        .product-rating {
+            color: var(--warning);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .purchase-options {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .purchase-options h5 {
+            color: var(--pharma-blue);
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .purchase-options h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, var(--pharma-blue), #007bff);
+            border-radius: 3px;
+        }
+        
+        .store-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .store-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            color: white;
+        }
+        
+        .store-btn i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .lazada-btn {
+            background: linear-gradient(135deg, var(--lazada), #1a1f8c);
+        }
+        
+        .shopee-btn {
+            background: linear-gradient(135deg, var(--shopee), #ff6b4a);
+        }
+        
+        .mercury-btn {
+            background: linear-gradient(135deg, var(--mercury), #007bff);
+        }
+        
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .in-stock {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            color: var(--success);
+        }
+        
+        .out-of-stock {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            color: #e53935;
+        }
+        
+        @media (max-width: 768px) {
+            .modal-product-image {
+                height: 220px;
+            }
+            
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .product-details-header {
+                flex-direction: column;
+            }
+            
+            .product-price {
+                margin-top: 15px;
+            }
+            
+            .image-container {
+                padding: 20px;
+            }
+        }
+        
+        .section-title {
+            font-weight: 700;
+            color: var(--pharma-blue);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--pharma-blue), #007bff);
+            border-radius: 2px;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--pharma-blue);
+            transition: transform 0.3s;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .info-card h6 {
+            color: var(--pharma-blue);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-card h6 i {
+            margin-right: 10px;
+            background: linear-gradient(135deg, var(--pharma-blue), #007bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-pills"></i>MediCare Plus
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Your Health, Our Priority</h1>
+            <p class="lead">Discover our wide range of pharmaceutical products for better health and wellness. Trusted by thousands of customers nationwide.</p>
+            <button class="btn btn-light btn-lg px-4 py-2">Browse All Products</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search and Filter Section -->
+        <div class="search-container">
+            <div class="row">
+                <div class="col-md-8 mb-3 mb-md-0">
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-end-0">
+                            <i class="fas fa-search text-muted"></i>
+                        </span>
+                        <input type="text" class="form-control border-start-0" id="searchInput" placeholder="Search for medicines, supplements...">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select" id="sortSelect">
+                        <option selected>Sort by: Recommended</option>
+                        <option value="1">Price: Low to High</option>
+                        <option value="2">Price: High to Low</option>
+                        <option value="3">Name: A to Z</option>
+                        <option value="4">Name: Z to A</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h6 class="text-muted mb-3">Filter by Category:</h6>
+                <div class="d-flex flex-wrap">
+                    <button class="btn btn-outline-primary category-btn active" data-category="all">All Products</button>
+                    <button class="btn btn-outline-primary category-btn" data-category="pain-relief">Pain Relief</button>
+                    <button class="btn btn-outline-primary category-btn" data-category="vitamins">Vitamins & Supplements</button>
+                    <button class="btn btn-outline-primary category-btn" data-category="cold-flu">Cold & Flu</button>
+                    <button class="btn btn-outline-primary category-btn" data-category="digestive">Digestive Health</button>
+                    <button class="btn btn-outline-primary category-btn" data-category="skin-care">Skin Care</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <h2 class="section-title">Our Products</h2>
+        <div class="row" id="productsGrid">
+            <!-- Product cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="fas fa-pills me-2"></i>MediCare Plus</h5>
+                    <p class="mt-3">Providing high-quality pharmaceutical products for over 20 years. Your health is our top priority.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Products</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Pain Relief</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Vitamins & Supplements</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Cold & Flu</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Digestive Health</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Health St, Medical City</li>
+                        <li><i class="fas fa-phone me-2"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@medicare.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4">
+            <div class="text-center">
+                <p>&copy; 2023 MediCare Plus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Centered Image Container -->
+                    <div class="image-container">
+                        <img src="" class="modal-product-image" id="modalProductImage" alt="Product Image">
+                    </div>
+                    
+                    <div class="product-details-container">
+                        <div class="product-details-header">
+                            <div>
+                                <h4 id="modalProductName" class="product-title mb-2"></h4>
+                                <span class="product-category" id="modalProductCategory"></span>
+                                <div class="availability-badge mt-2" id="modalProductAvailability"></div>
+                            </div>
+                            <div class="product-price text-end" id="modalProductPrice"></div>
+                        </div>
+                        
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="text-muted ms-1">(42 reviews)</span>
+                        </div>
+                        
+                        <p class="product-description" id="modalProductDescription"></p>
+                        
+                        <!-- Purchase Options -->
+                        <div class="purchase-options">
+                            <h5>Available at:</h5>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href="#" class="store-btn lazada-btn">
+                                        <i class="fab fa-shopify"></i> Lazada
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="store-btn shopee-btn">
+                                        <i class="fas fa-shopping-bag"></i> Shopee
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="store-btn mercury-btn">
+                                        <i class="fas fa-store"></i> Mercury Drug
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h6><i class="fas fa-check-circle"></i> Key Benefits</h6>
+                                    <ul class="product-details-list" id="modalProductBenefits">
+                                        <!-- Benefits will be inserted here -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h6><i class="fas fa-exclamation-triangle"></i> Important Information</h6>
+                                    <ul class="warnings-list" id="modalProductWarnings">
+                                        <!-- Warnings will be inserted here -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h6><i class="fas fa-prescription-bottle"></i> Dosage Information</h6>
+                            <p id="modalProductDosage" class="mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <div>
+                            <span class="text-muted me-3">In Stock</span>
+                            <span class="badge bg-success">Available</span>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-add-to-cart text-white">
+                                <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Sample product data with larger images for modal
+        const products = [
+            {
+                id: 1,
+                name: "PainRelief Extra Strength",
+                category: "pain-relief",
+                price: "$12.99",
+                image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                cardImage: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                description: "Fast-acting pain relief for headaches, muscle aches, and arthritis. Our advanced formula provides 24-hour relief with just one dose.",
+                benefits: ["Fast-acting formula", "Non-drowsy", "24-hour relief", "Easy to swallow", "Doctor recommended"],
+                dosage: "Take 1-2 tablets every 4-6 hours as needed. Do not exceed 8 tablets in 24 hours.",
+                warnings: ["May cause stomach upset", "Consult doctor if pregnant", "Do not take with alcohol", "Keep out of reach of children"],
+                inStock: true
+            },
+            {
+                id: 2,
+                name: "Immune Boost Vitamin C",
+                category: "vitamins",
+                price: "$15.49",
+                image: "https://images.unsplash.com/photo-1590301157890-4810ed352723?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                cardImage: "https://images.unsplash.com/photo-1590301157890-4810ed352723?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                description: "High-potency Vitamin C to support immune system function. Each tablet contains 1000mg of Vitamin C with rose hips for better absorption.",
+                benefits: ["Immune system support", "Antioxidant protection", "Promotes collagen production", "Easy to absorb", "With rose hips"],
+                dosage: "Take one tablet daily with a meal.",
+                warnings: ["May cause mild stomach discomfort", "Consult doctor if taking blood thinners"],
+                inStock: true
+            },
+            {
+                id: 3,
+                name: "Cold & Flu Relief",
+                category: "cold-flu",
+                price: "$18.99",
+                image: "https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                cardImage: "https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                description: "Multi-symptom relief for cold and flu including congestion, cough, fever, and body aches. Non-drowsy formula lets you stay productive.",
+                benefits: ["Multi-symptom relief", "Non-drowsy formula", "Reduces fever", "Relieves cough", "Decongestant"],
+                dosage: "Take 2 capsules every 6 hours. Do not exceed 8 capsules in 24 hours.",
+                warnings: ["May cause drowsiness", "Do not operate machinery if drowsy", "Consult doctor for high blood pressure"],
+                inStock: true
+            }
+        ];
+
+        // Function to render products
+        function renderProducts(productsToRender) {
+            const productsGrid = document.getElementById('productsGrid');
+            productsGrid.innerHTML = '';
+            
+            productsToRender.forEach(product => {
+                const productCard = `
+                    <div class="col-md-6 col-lg-4 mb-4" data-category="${product.category}">
+                        <div class="card product-card h-100">
+                            <div class="position-relative">
+                                <img src="${product.cardImage}" class="card-img-top product-image" alt="${product.name}">
+                                <span class="badge category-badge">${getCategoryName(product.category)}</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title product-title">${product.name}</h5>
+                                <p class="card-text text-muted flex-grow-1">${product.description.substring(0, 100)}...</p>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="h5 text-success mb-0">${product.price}</span>
+                                    ${product.inStock ? 
+                                        '<div class="availability-badge in-stock"><i class="fas fa-check-circle me-1"></i> In Stock</div>' : 
+                                        '<div class="availability-badge out-of-stock"><i class="fas fa-times-circle me-1"></i> Out of Stock</div>'
+                                    }
+                                </div>
+                                <button class="btn btn-primary mt-3 view-details" data-id="${product.id}">
+                                    <i class="fas fa-info-circle me-1"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productsGrid.innerHTML += productCard;
+            });
+            
+            // Add event listeners to view details buttons
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    const product = products.find(p => p.id === productId);
+                    showProductDetails(product);
+                });
+            });
+        }
+
+        // Function to get category display name
+        function getCategoryName(category) {
+            const categoryMap = {
+                'all': 'All Products',
+                'pain-relief': 'Pain Relief',
+                'vitamins': 'Vitamins & Supplements',
+                'cold-flu': 'Cold & Flu',
+                'digestive': 'Digestive Health',
+                'skin-care': 'Skin Care'
+            };
+            return categoryMap[category] || category;
+        }
+
+        // Function to show product details in modal
+        function showProductDetails(product) {
+            document.getElementById('modalProductName').textContent = product.name;
+            document.getElementById('modalProductCategory').textContent = getCategoryName(product.category);
+            document.getElementById('modalProductDescription').textContent = product.description;
+            document.getElementById('modalProductPrice').textContent = product.price;
+            document.getElementById('modalProductImage').src = product.image;
+            document.getElementById('modalProductDosage').textContent = product.dosage;
+            
+            // Set availability badge
+            const availabilityBadge = document.getElementById('modalProductAvailability');
+            if (product.inStock) {
+                availabilityBadge.className = 'availability-badge in-stock';
+                availabilityBadge.innerHTML = '<i class="fas fa-check-circle me-1"></i> In Stock';
+            } else {
+                availabilityBadge.className = 'availability-badge out-of-stock';
+                availabilityBadge.innerHTML = '<i class="fas fa-times-circle me-1"></i> Out of Stock';
+            }
+            
+            const benefitsList = document.getElementById('modalProductBenefits');
+            benefitsList.innerHTML = '';
+            product.benefits.forEach(benefit => {
+                const li = document.createElement('li');
+                li.textContent = benefit;
+                benefitsList.appendChild(li);
+            });
+            
+            const warningsList = document.getElementById('modalProductWarnings');
+            warningsList.innerHTML = '';
+            product.warnings.forEach(warning => {
+                const li = document.createElement('li');
+                li.textContent = warning;
+                warningsList.appendChild(li);
+            });
+            
+            const modal = new bootstrap.Modal(document.getElementById('productModal'));
+            modal.show();
+        }
+
+        // Function to filter products by category
+        function filterProductsByCategory(category) {
+            if (category === 'all') {
+                return products;
+            }
+            return products.filter(product => product.category === category);
+        }
+
+        // Function to search products
+        function searchProducts(query) {
+            const lowerCaseQuery = query.toLowerCase();
+            return products.filter(product => 
+                product.name.toLowerCase().includes(lowerCaseQuery) || 
+                product.description.toLowerCase().includes(lowerCaseQuery)
+            );
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render all products initially
+            renderProducts(products);
+            
+            // Category filter event listeners
+            document.querySelectorAll('.category-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.category-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    const filteredProducts = filterProductsByCategory(category);
+                    renderProducts(filteredProducts);
+                });
+            });
+            
+            // Search functionality
+            document.getElementById('searchInput').addEventListener('input', function() {
+                const query = this.value;
+                if (query.length >= 2 || query.length === 0) {
+                    const searchedProducts = searchProducts(query);
+                    renderProducts(searchedProducts);
+                }
+            });
+            
+            // Sort functionality
+            document.getElementById('sortSelect').addEventListener('change', function() {
+                // In a real application, this would sort the products
+                // For this demo, we'll just show an alert
+                alert('Sorting functionality would be implemented here!');
+            });
+        });
+    </script>
+</body>
+</html>

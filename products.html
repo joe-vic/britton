@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products | Britton Distributions Inc.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="images/Britton_icon.ico">
@@ -89,7 +90,7 @@
 
                 <div id="catalogSummary" class="catalog-summary" aria-live="polite"></div>
 
-                <div id="productResults" class="catalog-grid" aria-live="polite"></div>
+                <div id="productResults" class="row" aria-live="polite"></div>
                 <p id="catalogEmpty" class="catalog-empty" hidden>No products match your current filters. Try adjusting
                     your keywords or filter options.</p>
 
@@ -177,25 +178,56 @@
         </section>
     </main>
 
-
-
-    <div id="productModal" class="product-modal" aria-hidden="true" data-modal-close>
-        <div class="product-modal__dialog">
-            <button id="productModalClose" class="product-modal__close" aria-label="Close modal">&times;</button>
-            <div class="product-modal__content">
-                <div class="product-modal__media">
-                    <img id="productModalImage" src="" alt="">
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="product-modal__info">
-                    <h2 id="productModalTitle"></h2>
-                    <span id="productModalTags"></span>
-                    <p id="productModalSummary"></p>
-                    <h3>Benefits</h3>
-                    <ul id="productModalBenefits"></ul>
-                    <h3>Directions for Use</h3>
-                    <ul id="productModalDirections"></ul>
-                    <h3>Availability</h3>
-                    <p id="productModalAvailability"></p>
+                <div class="modal-body">
+                    <!-- Centered Image Container -->
+                    <div class="image-container">
+                        <img src="" class="modal-product-image" id="modalProductImage" alt="Product Image">
+                    </div>
+                    
+                    <div class="product-details-container">
+                        <div class="product-details-header">
+                            <div>
+                                <h4 id="modalProductName" class="product-title mb-2"></h4>
+                                <span class="product-category" id="modalProductCategory"></span>
+                            </div>
+                            <div class="product-price" id="modalProductFormSize"></div>
+                        </div>
+                        
+                        <p class="product-description" id="modalProductDescription"></p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h6><i class="fas fa-check-circle"></i> Key Benefits</h6>
+                                    <ul class="product-details-list" id="modalProductBenefits">
+                                        <!-- Benefits will be inserted here -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-card">
+                                    <h6><i class="fas fa-prescription-bottle"></i> Directions for Use</h6>
+                                     <ul class="product-details-list" id="modalProductDirections"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h6><i class="fas fa-store"></i> Availability</h6>
+                            <p id="modalProductAvailability" class="mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -212,6 +244,7 @@
         </a>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/products.js" defer></script>
 </body>

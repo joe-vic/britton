@@ -1037,65 +1037,89 @@
     }
 
     function createCard(product) {
-        const card = document.createElement('article');
-        card.className = 'product-card';
-        const media = document.createElement('figure');
-        media.className = 'product-card__media';
-        const img = document.createElement('img');
-        const imageName = encodeURI(product.image);
-        img.src = `images/products/${imageName}`;
-        img.alt = product.imageAlt || product.name;
-        img.loading = 'lazy';
-        media.appendChild(img);
-        const content = document.createElement('div');
-        content.className = 'product-card__content';
-        const meta = document.createElement('span');
-        meta.className = 'product-card__meta';
-        meta.textContent = `${product.division} • ${product.category}`;
-        const title = document.createElement('h3');
-        title.textContent = product.name;
-        const summary = document.createElement('p');
-        summary.className = 'product-card__summary';
-        summary.textContent = product.summary;
-        const action = document.createElement('button');
-        action.type = 'button';
-        action.className = 'product-card__action';
-        action.textContent = 'View details';
-        action.addEventListener('click', () => openModal(product, action));
-        content.append(meta, title, summary, action);
-        card.append(media, content);
-        return card;
-    }
+    const card = document.createElement('article');
+    card.className = 'col-md-6 col-lg-4 mb-4';
+    
+    card.innerHTML = `
+        <div class="card product-card h-100">
+            <div class="position-relative">
+                <img src="images/products/${encodeURI(product.image)}" class="card-img-top product-image" alt="${product.imageAlt || product.name}">
+                <span class="badge category-badge">${product.category}</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title product-title">${product.name}</h5>
+                <p class="card-text text-muted flex-grow-1">${product.summary.substring(0, 100)}...</p>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                    <span class="h6 text-muted mb-0">${product.division}</span>
+                </div>
+                <button class="btn btn-primary mt-3 view-details" data-id="${product.id}">
+                    <i class="fas fa-info-circle me-1"></i> View Details
+                </button>
+            </div>
+        </div>
+    `;
 
-    function openModal(product, trigger) {
-        lastFocus = trigger || document.activeElement;
-        const imageName = encodeURI(product.image);
-        modalImg.src = `images/products/${imageName}`;
-        modalImg.alt = product.imageAlt || product.name;
-        modalTitle.textContent = product.name;
-        modalTags.textContent = `${product.division} • ${product.category}`;
-        modalSummary.textContent = product.summary;
-        fillList(modalBenefits, product.benefits);
-        fillList(modalDirections, product.directions);
-        modalAvailability.textContent = product.availability;
-        modal.classList.add('is-visible');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('modal-open');
-        modalClose.focus();
-        document.addEventListener('keydown', handleKeydown);
-    }
+    card.querySelector('.view-details').addEventListener('click', () => openModal(product));
+    return card;
+}
 
-    function closeModal() {
-        modal.classList.remove('is-visible');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('modal-open');
-        document.removeEventListener('keydown', handleKeydown);
-        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
-    }
+function openModal(product) {
+    const modalNode = document.getElementById('productModal');
+    
+    document.getElementById('modalProductName').textContent = product.name;
+    document.getElementById('modalProductCategory').textContent = product.category;
+    document.getElementById('modalProductDescription').textContent = product.summary;
+    document.getElementById('modalProductFormSize').textContent = product.formSize;
+    document.getElementById('modalProductImage').src = `images/products/${encodeURI(product.image)}`;
+    document.getElementById('modalProductAvailability').textContent = product.availability;
 
-    function handleKeydown(e) {
-        if (e.key === 'Escape') closeModal();
-    }
+    const benefitsList = document.getElementById('modalProductBenefits');
+    benefitsList.innerHTML = '';
+    product.benefits.forEach(benefit => {
+        const li = document.createElement('li');
+        li.textContent = benefit;
+        benefitsList.appendChild(li);
+    });
+
+    const directionsList = document.getElementById('modalProductDirections');
+    directionsList.innerHTML = '';
+    product.directions.forEach(direction => {
+        const li = document.createElement('li');
+        li.textContent = direction;
+        directionsList.appendChild(li);
+    });
+    
+    const modal = new bootstrap.Modal(modalNode);
+    modal.show();
+}
+
+function attach() {
+    search.addEventListener('input', debounce(() => {
+        page = 1;
+        filter();
+    }, 200));
+    divisionFilter.addEventListener('change', () => {
+        page = 1;
+        filter();
+    });
+    categoryFilter.addEventListener('change', () => {
+        page = 1;
+        filter();
+    });
+    prev.addEventListener('click', () => {
+        if (page > 1) {
+            page--;
+            render();
+        }
+    });
+    next.addEventListener('click', () => {
+        const total = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
+        if (page < total) {
+            page++;
+            render();
+        }
+    });
+}
 
     function fillList(container, items) {
         container.innerHTML = '';
